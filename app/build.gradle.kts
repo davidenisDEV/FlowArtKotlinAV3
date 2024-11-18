@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("kotlin-kapt")
 }
 
 android {
@@ -53,13 +54,17 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.play.services.auth)
 
-    // ViewPage
+    // ViewPage2
     implementation("androidx.viewpager2:viewpager2:1.1.0-beta01")
 
     // QR Scanner
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    // Glide para carregamento de imagens
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
 
     // Testing Libraries
     testImplementation(libs.junit)
@@ -69,3 +74,4 @@ dependencies {
     // Google Generative AI Client (caso seja necessário)
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
 }
+

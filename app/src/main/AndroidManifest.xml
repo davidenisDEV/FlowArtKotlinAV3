@@ -35,9 +35,8 @@
                 android:value="" />
         </activity>
 
-        <activity
-            android:name=".Destaque"
-            android:exported="false" />
+        <activity android:name=".ui.destaque.Destaque" />
+
 
     </application>
 
